@@ -2,6 +2,18 @@
 
 require __DIR__.'/vendor/autoload.php';
 
+use \App\Http\Router;
+use \App\Http\Response;
 use \App\Controller\Pages\Home;
 
-echo Home::getHome();
+
+define('URL', 'http://localhost/wande');
+$obRouter = new Router(URL);
+
+$obRouter->get('/', [
+    function(){
+        return new Response(200, Home::getHome());
+    }
+]);
+
+$obRouter->run()->sendResponse();
