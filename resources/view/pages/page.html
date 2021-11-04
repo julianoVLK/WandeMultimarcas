@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{title}}</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/base.css">
+
+	<!-- JQUERY -->
+	<script type="text/javascript" src="assets/jquery.js"></script>
+
+	<!-- FONT AWESOME -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" rel="stylesheet">
+
+	<!-- SLICK -->
+	<link rel="stylesheet" href="plugins/slick/slick.css">
+	<link rel="stylesheet" href="plugins/slick/slick-theme.css">
+	<script src="plugins/slick/slick.js"></script>
+
+	<!-- FAVICON -->
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+	<link rel="manifest" href="assets/favicon/site.webmanifest">
+
+	<!-- FONTES -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> 
+
+    <script type="text/javascript">
+		$(document).ready(function(){
+		  $('.marcas').slick({
+		  	accessibility: true,
+		  	adaptiveHeight: false,
+		  	appendArrows: $('.marcas'),
+		  	arrows: true,
+		  	speed: 500,
+		  	waitForAnimate: true,
+		  	autoplay: true,
+		  	draggable: true,
+		  	infinite: true,
+		  	initialSlide: 0,
+		  	pauseOnHover: true,
+		  	slidesToShow: 6,
+		  	slidesPerRow: 1,
+		  	responsive: [{
+	    		breakpoint: 1024,
+	    		settings: {
+	      			slidesToShow: 1,
+	      		}
+	  		}]
+		  });
+		});
+
+	</script>
+
+</head>
+<body>
+	{{header}}
+
+    {{content}}
+
+    {{footer}}
+</body>
+</html>
