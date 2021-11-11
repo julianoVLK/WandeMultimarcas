@@ -19,22 +19,22 @@ class Request {
     }
 
     public function getHttpMethod() {
-        return this->httpMethod;
+        return $this->httpMethod;
     }
 
     public function getUri() {
-        return this->uri;
+        return $this->uri;
     }
 
     public function getHeaders() {
-        return this->headers;
+        return $this->headers;
     }
 
     public function getQueryParams() {
-        return this->queryParams;
+        return $this->queryParams;
     }
 
     public function getPostVars() {
-        return this->postVars;
+        return $this->postVars;
     }
 }

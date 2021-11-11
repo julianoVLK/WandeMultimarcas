@@ -9,9 +9,9 @@ use \App\Model\Entity\Organization;
  @return string	
 */
 
-class Home extends Page {
+class Sobre extends Page {
 
-	public static function getHome() {
+	public static function getSobre() {
 
 		$obOrganization = new Organization;
 		//View da Home
@@ -19,6 +19,6 @@ class Home extends Page {
 			'name' => $obOrganization->name
 		]);
 
-		return parent::getPage('Home - Wande Multimarcas', $content);
+		return parent::getPage('Sobre - Wande Multimarcas', $content);
 	}
 }
