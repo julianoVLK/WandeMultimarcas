@@ -7,16 +7,16 @@ use \App\Utils\View;
 use \App\Common\Environment;
 use \App\Common\Email;
 
-$address = "julianovorvo@gmail.com";
-$subject = "Olá Mundo";
-$body = "<b>Ola Mundo</b><br><br><i>Olá Mundo</i>";
+Environment::load(__DIR__);
+
+$addresses = 'julianovorvo@gmail.com';
+$subject = 'teste2';
+$body = '<b>Chegouuuuuuuuuuuuuuuuuuuu</b><br>essa<br><i>Disgraçççaaaaaaaa</i>';
 
 $obEmail = new Email;
-$sucesso = $obEmail->sendEmail($address, $subject, $body);
+$sucesso = $obEmail->sendEmail($addresses, $subject, $body);
 
-echo $sucesso ? 'Mensagem Enviada' : $obEmail->getError();
-die('aq');
-Environment::load(__DIR__);
+echo $sucesso ? 'Mesangem Enviada' : $obEmail->getError();
 
 $env = getenv();
 //echo'<pre>';print_r($env);

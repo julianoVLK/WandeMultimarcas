@@ -6,15 +6,6 @@ use PHPMailer\PHPMailer\PHPmailer;
 use PHPMailer\PHPmailer\Exception as PHPMailerException;
 
 class Email {
-    const HOST = 'smt.gmail.com';
-    const USER = 'julianovorvo@gmail.com';
-    const PASS = 'rosane1618';
-    const SECURE = 'TLS';
-    const PORT = '587';
-    const CHARSET = 'UTF-8';
-
-    const FROM_EMAIL = 'juliano_vorvo@gmail.com';
-    const FROM_NAME = 'Juliano Cesar Volski';
 
     /**
      * Mensagem de erro do envio
@@ -47,16 +38,16 @@ class Email {
         try{
             //Credênciais de acesso
             $obMail->isSMTP(true);
-            $obMail->Host = self::HOST;
+            $obMail->Host = getenv('SMTP_HOST');
             $obMail->SMTPAuth = true;
-            $obMail->Username = self::USER;
-            $obMail->Password = self::PASS;
-            $obMail->SMTPSecure = self::SECURE;
-            $obMail->Port = self::PORT;
-            $obMail->CharSet = self::CHARSET;
+            $obMail->Username = getenv('SMTP_USER');
+            $obMail->Password = getenv('SMTP_PASS');
+            $obMail->SMTPSecure = getenv('SMTP_SECURE');
+            $obMail->Port = getenv('SMTP_PORT');
+            $obMail->CharSet = getenv('SMTP_CHARSET');
 
             //Remetente
-            $obMail->setFrom(self::FROM_EMAIL, self::FROM_NAME);
+            $obMail->setFrom(getenv('SMTP_FROM_EMAIL'), getenv('SMTP_FROM_NAME'));
 
             //Destinatários
             $addresses = is_array($addresses) ? $addresses : [$addresses];
