@@ -6,7 +6,7 @@ namespace App\Common;
  * Método responsável por carregar as variáveis de ambiente do projeto
  * @param string $dir Caminho absoluto da pasta onde econtra-se o arquivo .env
  */
-class Environment {
+class Ambiente {
     public static function load($dir) {
         if(!file_exists($dir.'/.env')) {
             return false;

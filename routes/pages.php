@@ -17,6 +17,20 @@ $obRouter->get('/sobre', [
     }
 ]);
 
+//ROTA AVALIAÇÃO
+$obRouter->get('/avaliacoes', [
+    function(){
+        return new Response(200, Pages\Avaliacoes::getAvaliacoes());
+    }
+]);
+
+//ROTA AVALIAÇÃO (INSERT)
+$obRouter->post('/avaliacoes', [
+    function($request){
+        return new Response(200, Pages\Avaliacoes::getAvaliacoes());
+    }
+]);
+
 //ROTA DINÂMICA
 $obRouter->get('/pagina/{idPagina}/{acao}', [
     function($idPagina, $acao){
