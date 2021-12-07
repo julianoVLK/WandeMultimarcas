@@ -4,20 +4,17 @@
 		<hr>
 
 		<section id="avaliacoes">
-			<div class="card text-dark mb-3">
-				<h5 class="card-header">
-					Juliano Cesar Volski <small>20/03/2021</small>
-				</h5>
-				<div class="card-body">
-					KKKKKKKKKKAISDGASYUDGASDGASUDYGAHKDGASKDGASDHAGSBDHJKABSDAHJSDGAKSDGASHDKJABSHDKJGASDGAVHDKJGASHKDGASHKDJGASHDKJGASDGAS
-				</div>
-			</div>
+			
+			{{itens}}
+
+			{{pagination}}
+			
 		</section>
 
 		<section id="form">
 			<h3>Envie sua avaliação</h3>
 
-			<form method="post">
+			<form method="post" action="?page=1">
 				<div class="form-group">
 					<label for="nome">Nome</label>
 					<input type="text" name="nome" required class="form-control">

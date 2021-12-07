@@ -19,15 +19,15 @@ $obRouter->get('/sobre', [
 
 //ROTA AVALIAÇÃO
 $obRouter->get('/avaliacoes', [
-    function(){
-        return new Response(200, Pages\Avaliacoes::getAvaliacoes());
+    function($request){
+        return new Response(200, Pages\Avaliacoes::getAvaliacoes($request));
     }
 ]);
 
 //ROTA AVALIAÇÃO (INSERT)
 $obRouter->post('/avaliacoes', [
     function($request){
-        return new Response(200, Pages\Avaliacoes::getAvaliacoes());
+        return new Response(200, Pages\Avaliacoes::insertAvaliacao($request));
     }
 ]);
 
